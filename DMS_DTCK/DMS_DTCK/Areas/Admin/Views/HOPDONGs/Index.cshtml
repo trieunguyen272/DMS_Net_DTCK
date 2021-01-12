@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Models.Framework.HOPDONG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SINHVIEN.MASV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHONG.MAPHONG)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYLAP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYBATDAU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYKETTHUC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HIEULUCHD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SINHVIEN.MASV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHONG.MAPHONG)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYLAP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYBATDAU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYKETTHUC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HIEULUCHD)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MAHOPDONG }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MAHOPDONG }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MAHOPDONG })
+        </td>
+    </tr>
+}
+
+</table>

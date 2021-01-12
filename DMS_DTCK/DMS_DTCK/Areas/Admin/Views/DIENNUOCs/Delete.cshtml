@@ -1,0 +1,73 @@
+﻿@model Models.Framework.DIENNUOC
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DIENNUOC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONG.MAPHONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONG.MAPHONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QUANLY.HOVATEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QUANLY.HOVATEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THANG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHISODIEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHISODIEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CHISONUOC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHISONUOC)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Infor";
+    Layout = "~/Areas/Student/Views/Shared/_LayoutStudent.cshtml";
+}
+
+@{
+
+    var session = (DMS_DTCK.Common.UserLogin)Session[DMS_DTCK.Common.CommonConstants.USER_SESSION];
+}
+<html>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label>
+                    Mã sinh viên
+                </label>
+            </td>
+            <td>
+                <input value="@session.UserName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Tên sinh viên
+                </label>
+            </td>
+            <td>
+                <input value="@session.User" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    Ngày sinh
+                </label>
+            </td>
+            <td>
+                <input value="@session.Identity_card" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+

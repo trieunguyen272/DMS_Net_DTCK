@@ -1,0 +1,67 @@
+﻿@model Models.Framework.HOPDONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOPDONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONG.MAKHU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONG.MAKHU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SINHVIEN.MATKHAU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SINHVIEN.MATKHAU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYLAP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYLAP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYBATDAU)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYBATDAU)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYKETTHUC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYKETTHUC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HIEULUCHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HIEULUCHD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MAHOPDONG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

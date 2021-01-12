@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Models.Framework.SINHVIEN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>DANH SÁCH SINH VIÊN NỘI TRÚ</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MASV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOVATEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CMND)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOP)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.SVNOITRU)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MASV)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.HOVATEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYSINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CMND)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SVNOITRU)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MASV }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MASV }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MASV })
+        </td>
+    </tr>
+}
+
+</table>
